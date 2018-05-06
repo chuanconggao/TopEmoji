@@ -54,7 +54,7 @@ Alternatively, you can use the algorithm via API.
 ``` python
 from topemoji import search
 
-print(search("face", k=3)) # Return each similarity and the respective emojis.
+print(search("baby", k=5)) # Return each similarity and the respective emojis.
 # [(1.0, [('👶', 'baby')]),
 #  (0.6660006660006661, [('👼', 'baby angel'), ('🐤', 'baby chick')]),
 #  (0.665889795238888, [('🍼', 'baby bottle'), ('🚼', 'baby symbol')])]

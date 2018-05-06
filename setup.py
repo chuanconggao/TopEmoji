@@ -3,7 +3,7 @@
 from setuptools import setup
 
 url = "https://github.com/chuanconggao/TopEmoji"
-version = "0.1.1"
+version = "0.1.1.1"
 
 setup(
     name="TopEmoji",
