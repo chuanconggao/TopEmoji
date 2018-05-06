@@ -3,12 +3,9 @@
 """
 Usage:
     topemoji-cli <query> [-k <k>]
-
-    topsim-cli --help
 """
 
 from docopt import docopt
-
 from topemoji import search
 
 argv = docopt(__doc__)
@@ -16,11 +13,8 @@ argv = docopt(__doc__)
 query = argv["<query>"]
 
 k = argv["<k>"]
-if k is None:
-    k = 1
-else:
-    k = int(k)
+k = int(k) if k else 1
 
 for sim, emojis in search(query, k=k):
     for emoji in emojis:
-        print("{}\t{}\t{:.4}".format(emoji[0], emoji[1], sim))
+        print("{}\t{}\t{:.4}".format(*emoji, sim))
