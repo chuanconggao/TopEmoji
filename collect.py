@@ -10,5 +10,5 @@ parser = re.compile(r"^(\w+(?: \w+)*) +; (\S+) +# (\W+) (.+)$", re.I | re.U)
 
 for l in r.text.split('\n'):
     match = parser.fullmatch(l)
-    if match:
+    if match and match.group(2) == "fully-qualified":
         print("{}\t{}".format(match.group(3), match.group(4)))
