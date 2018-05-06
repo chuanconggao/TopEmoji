@@ -33,6 +33,20 @@ topemoji-cli "baby" -k 5
 🚼	baby symbol	0.6659
 ```
 
+- You can also use emoji as query.
+
+``` bash
+topemoji-cli "😀" -k 5
+```
+
+``` text
+😀	grinning face	1.0
+😆	grinning squinting face	0.9993
+😺	grinning cat face	0.9331
+😅	grinning face with sweat	0.866
+😃	grinning face with big eyes	0.8659
+```
+
 # API Usage
 
 Alternatively, you can use the algorithm via API.

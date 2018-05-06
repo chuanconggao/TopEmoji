@@ -7,6 +7,7 @@ from topsim import TopSim
 datafile = os.path.join(os.path.split(__file__)[0], "emoji.tsv")
 
 data = [line.strip().split('\t') for line in open(datafile)]
+emojimap = dict(data)
 datamap = {i: (emoji, text) for i, (emoji, text) in enumerate(data)}
 
 ts = TopSim((text for emoji, text in data), numGrams=3)
@@ -17,5 +18,5 @@ def search(query, k=1):
             sim,
             [datamap[ln] for ln in lns]
         )
-        for sim, lns in ts.search(query, k=k, simFunc="tversky")
+        for sim, lns in ts.search(emojimap.get(query, query), k=k, simFunc="tversky")
     ]
