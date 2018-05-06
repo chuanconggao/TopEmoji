@@ -6,6 +6,8 @@
 
 - This is an application of [TopSim](https://github.com/chuanconggao/TopSim), which searches the most similar strings against the query in Python 3.
 
+The list of emojis are obtained from the official source [Full Emoji List](https://unicode.org/emoji/charts/full-emoji-list.html).
+
 # Installation
 
 This package is available on PyPI. Just use `pip3 install -U TopEmoji` to install it.
